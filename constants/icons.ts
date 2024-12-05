@@ -7,5 +7,21 @@ import PencilEditIcon from "@/assets/icons/pencil-edit.svg";
 import AddLineIcon from "@/assets/icons/add-line.svg";
 import ChevronRightIcon from "@/assets/icons/chevron-right.svg";
 import EmptyStateIcon from "@/assets/icons/empty-state.svg";
+import SwitchVerticalIcon from "@/assets/icons/switch-vertical.svg";
+import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
+import VerifiedTickIcon from "@/assets/icons/verified-tick.svg";
 
-export { MultiplyIcon, ArrowLeftIcon, DotsVIcon, SearchIcon, SettingsIcon, PencilEditIcon, AddLineIcon, ChevronRightIcon, EmptyStateIcon };
+export {
+  MultiplyIcon,
+  ArrowLeftIcon,
+  DotsVIcon,
+  SearchIcon,
+  SettingsIcon,
+  PencilEditIcon,
+  AddLineIcon,
+  ChevronRightIcon,
+  EmptyStateIcon,
+  SwitchVerticalIcon,
+  ArrowDownIcon,
+  VerifiedTickIcon,
+};
