@@ -10,13 +10,18 @@ const BUTTON_VARIANTS = {
 interface ButtonProps {
   variant?: keyof typeof BUTTON_VARIANTS;
   label: string;
+  onPress?: () => void;
 }
 
 const Button = (props: ButtonProps) => {
-  const { variant = "primary", label = "" } = props;
+  const { variant = "primary", label = "", onPress } = props;
 
   return (
-    <TouchableOpacity className={`${BUTTON_VARIANTS[variant].body} w-full items-center justify-center py-4 rounded-[44px]`} activeOpacity={0.7}>
+    <TouchableOpacity
+      className={`${BUTTON_VARIANTS[variant].body} w-full items-center justify-center py-4 rounded-[44px]`}
+      activeOpacity={0.7}
+      onPress={onPress}
+    >
       <Text className={`${BUTTON_VARIANTS[variant].text} font-inter_semibold text-[16px] leading-7`}>{label}</Text>
     </TouchableOpacity>
   );

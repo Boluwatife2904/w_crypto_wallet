@@ -1,9 +1,13 @@
 import { useEffect } from "react";
 import { Stack } from "expo-router";
+import { SheetProvider } from "react-native-actions-sheet";
+
 import * as SplashScreen from "expo-splash-screen";
+
 import { useFonts } from "expo-font";
 
-import "../assets/css/global.css";
+import "@/components/sheets";
+import "@/assets/css/global.css";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -24,5 +28,9 @@ export default function RootLayout() {
 
   if (!loaded) return null;
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <SheetProvider context="global">
+      <Stack screenOptions={{ headerShown: false }} />
+    </SheetProvider>
+  );
 }
