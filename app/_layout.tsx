@@ -8,6 +8,7 @@ import { useFonts } from "expo-font";
 
 import "@/components/sheets";
 import "@/assets/css/global.css";
+import { StatusBar } from "react-native";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -30,7 +31,10 @@ export default function RootLayout() {
 
   return (
     <SheetProvider context="global">
-      <Stack screenOptions={{ headerShown: false }} />
+      <StatusBar barStyle={"dark-content"} translucent networkActivityIndicatorVisible />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+      </Stack>
     </SheetProvider>
   );
 }

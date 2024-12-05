@@ -1,3 +1,4 @@
+import { useRouter } from "expo-router";
 import { ImageBackground, Text, View, Image } from "react-native";
 
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -6,8 +7,12 @@ import { SheetManager } from "react-native-actions-sheet";
 import Button from "@/components/ui/Button";
 
 export default function Index() {
+  const router = useRouter();
   const getStarted = async () => {
-    await SheetManager.show("add-wallet-sheet");
+    const response = await SheetManager.show("add-wallet-sheet");
+    if (response) {
+      router.push("/home");
+    }
   };
 
   return (
