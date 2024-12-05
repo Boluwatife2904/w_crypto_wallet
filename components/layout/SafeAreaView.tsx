@@ -1,5 +1,5 @@
 import { type PropsWithChildren } from "react";
-import { ScrollView } from "react-native";
+import { View, ScrollView } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 const CustomSafeAreaView = (props: PropsWithChildren) => {
@@ -7,11 +7,7 @@ const CustomSafeAreaView = (props: PropsWithChildren) => {
   const { bottom } = useSafeAreaInsets();
 
   return (
-    <ScrollView
-      contentContainerStyle={{ flexGrow: 1, paddingBottom: bottom + 38 }}
-      style={{ flex: 1, backgroundColor: "#F9FAFB", paddingTop: 20, paddingHorizontal: 24 }}
-      {...rest}
-    >
+    <ScrollView style={{ flex: 1, backgroundColor: "#F9FAFB", paddingTop: 20, paddingHorizontal: 24, paddingBottom: bottom + 38 }} {...rest}>
       {children}
     </ScrollView>
   );
