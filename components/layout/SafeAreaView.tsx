@@ -7,7 +7,11 @@ const CustomSafeAreaView = (props: PropsWithChildren) => {
   const { bottom } = useSafeAreaInsets();
 
   return (
-    <ScrollView style={{ flex: 1, backgroundColor: "#F9FAFB", paddingTop: 20, paddingBottom: bottom + 20, paddingHorizontal: 24 }} {...rest}>
+    <ScrollView
+      contentContainerStyle={{ flexGrow: 1, paddingBottom: bottom + 38 }}
+      style={{ flex: 1, backgroundColor: "#F9FAFB", paddingTop: 20, paddingHorizontal: 24 }}
+      {...rest}
+    >
       {children}
     </ScrollView>
   );
