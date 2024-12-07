@@ -10,6 +10,11 @@ import EmptyStateIcon from "@/assets/icons/empty-state.svg";
 import SwitchVerticalIcon from "@/assets/icons/switch-vertical.svg";
 import ArrowDownIcon from "@/assets/icons/arrow-down.svg";
 import VerifiedTickIcon from "@/assets/icons/verified-tick.svg";
+import ChevronDownIcon from "@/assets/icons/chevron-down.svg";
+import ScanIcon from "@/assets/icons/scan.svg";
+import SendIcon from "@/assets/icons/send.svg";
+import SwapIcon from "@/assets/icons/swap.svg";
+import Graph from "@/assets/icons/graph.svg";
 
 export {
   MultiplyIcon,
@@ -24,4 +29,9 @@ export {
   SwitchVerticalIcon,
   ArrowDownIcon,
   VerifiedTickIcon,
+  ChevronDownIcon,
+  ScanIcon,
+  SendIcon,
+  SwapIcon,
+  Graph,
 };

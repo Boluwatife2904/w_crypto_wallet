@@ -1,7 +1,7 @@
 import { View, Text, Modal, TouchableOpacity, TextInput, Image, ScrollView } from "react-native";
 import { useState } from "react";
 
-import { ArrowDownIcon, MultiplyIcon, VerifiedTickIcon } from "@/constants/icons";
+import { ArrowDownIcon, MultiplyIcon, SearchIcon, VerifiedTickIcon } from "@/constants/icons";
 
 interface PickerProps {
   action: "source" | "destination";
@@ -22,8 +22,8 @@ const CoinPicker = (props: PickerProps) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const handleCurrencySelect = () => {
-	setModalVisible(false)
-  }
+    setModalVisible(false);
+  };
 
   return (
     <>
@@ -63,7 +63,16 @@ const CoinPicker = (props: PickerProps) => {
             </TouchableOpacity>
             <Text className="font-inter_medium flex-1 text-[18px] text-center -tracking-[0.3px]">Select a token</Text>
           </View>
-          <View></View>
+          <View>
+            <View className="absolute flex top-2 left-4 z-[1]">
+              <SearchIcon color={'#5B7083'} />
+            </View>
+            <TextInput
+              className="bg-[#F0F2F5] pl-[50px] py-[10px] pr-6 text-[16px] font-inter_medium -tracking-[0.3px] rounded-full"
+              placeholder="Search"
+              placeholderTextColor={"#5B7083"}
+            />
+          </View>
           <Text className="font-inter_medium text-[#98A2B3] text-[16px]">Popular</Text>
           <ScrollView contentContainerStyle={{ gap: 20 }}>
             {POPULAR_COINS.map((coin, index) => (
@@ -71,7 +80,7 @@ const CoinPicker = (props: PickerProps) => {
                 key={index}
                 style={{ gap: 12 }}
                 className={`flex-row items-center ${index !== POPULAR_COINS.length && "pb-5 border-b border-[#F0F2F5]"}`}
-				onPress={handleCurrencySelect}
+                onPress={handleCurrencySelect}
               >
                 <Image source={coin.image} className="size-9" resizeMode="contain" />
                 <View style={{ gap: 8 }} className="flex-row items-center">

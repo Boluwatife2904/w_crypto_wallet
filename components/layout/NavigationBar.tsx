@@ -20,7 +20,7 @@ const iconMaps: Record<string, (isFocused: boolean) => ReactElement> = {
 
 const NavigationBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
   return (
-    <View className="bg-white bottom-[38px] w-full max-w-[90%] rounded-full border border-[#F0F2F5] mx-auto flex-row justify-between py-5 px-11">
+    <View className="bg-white absolute left-[5%] bottom-[38px] w-full max-w-[90%] rounded-full border border-[#F0F2F5] mx-auto flex-row justify-between py-5 px-11">
       {state.routes.map((route, index) => {
         const { options } = descriptors[route.key];
         const isFocused = state.index === index;

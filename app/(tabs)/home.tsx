@@ -1,4 +1,5 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import { useRouter } from "expo-router";
 
 import PageHeader from "@/components/layout/PageHeader";
 import CustomSafeAreaView from "@/components/layout/SafeAreaView";
@@ -6,9 +7,11 @@ import CustomSafeAreaView from "@/components/layout/SafeAreaView";
 import { AddLineIcon, ChevronRightIcon, EmptyStateIcon, PencilEditIcon, SearchIcon, SettingsIcon } from "@/constants/icons";
 
 const HomeScreen = () => {
+  const router = useRouter();
+
   return (
     <>
-      <PageHeader showBackButton={false} showOptionsButton={false} LeftContent={<SettingsIcon />} RightContent={<SearchIcon />} />
+      <PageHeader showBackButton={false} showOptionsButton={false} LeftContent={<SettingsIcon />} RightContent={<SearchIcon color="black" />} />
       <CustomSafeAreaView>
         <View style={{ gap: 16, marginBottom: 20 }}>
           <View className="flex-row items-center justify-between">
@@ -18,9 +21,13 @@ const HomeScreen = () => {
               <PencilEditIcon />
             </View>
           </View>
-          <View className="border border-[#F0F2F5] p-4 bg-white rounded-xl flex-row items-start justify-between">
+          <TouchableOpacity
+            className="border border-[#F0F2F5] p-4 bg-white rounded-xl flex-row items-start justify-between"
+            activeOpacity={0.7}
+            onPress={() => router.push("/wallets/1")}
+          >
             <View style={{ gap: 13 }} className="flex-row">
-              <Image source={require("@/assets/images/w-avatar.png")} resizeMode="contain" height={45} width={45} />
+              <Image source={require("@/assets/images/w-avatar.png")} resizeMode="contain" className="size-[45px] block" />
               <View style={{ gap: 4 }}>
                 <Text className="font-inter_medium text-[16px] -tracking-[0.3px] text-[#98A2B3]">0x74d5...35da</Text>
                 <Text className="text-[16px] font-inter_medium text-[#1D2739] leading-7">
@@ -34,10 +41,10 @@ const HomeScreen = () => {
               <Text className="text-[#98A2B3] text-[14px] font-inter_medium">+0%</Text>
               <ChevronRightIcon strokeWidth={0.5} stroke={"#40B869"} />
             </View>
-          </View>
+          </TouchableOpacity>
         </View>
         <View style={{ gap: 20 }} className="items-center justify-center">
-          <View className="w-full flex-row items-center justify-between">
+          <View className="w-full flex-row items-end justify-between">
             <Text className="text-[#1D2739] text-[18px] font-inter_medium">Recent activity</Text>
             <ChevronRightIcon stroke={"#98A2B3"} height={18} width={18} strokeWidth={0.5} />
           </View>
