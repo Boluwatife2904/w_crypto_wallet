@@ -15,6 +15,7 @@ import ScanIcon from "@/assets/icons/scan.svg";
 import SendIcon from "@/assets/icons/send.svg";
 import SwapIcon from "@/assets/icons/swap.svg";
 import Graph from "@/assets/icons/graph.svg";
+import ArrowRightIcon from "@/assets/icons/arrow-right.svg";
 
 export {
   MultiplyIcon,
@@ -34,4 +35,5 @@ export {
   SendIcon,
   SwapIcon,
   Graph,
+  ArrowRightIcon,
 };

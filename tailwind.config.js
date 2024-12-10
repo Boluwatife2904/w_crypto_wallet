@@ -11,6 +11,7 @@ module.exports = {
         inter_semibold: ["InterSemibold"],
         inter_bold: ["InterBold"],
         gelica_bold: ["GelicaBold"],
+        dmsans_medium: ["DMSansMedium"],
       },
       colors: {
         success: "#44B410",

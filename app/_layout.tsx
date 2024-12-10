@@ -19,6 +19,7 @@ export default function RootLayout() {
     InterSemibold: require("../assets/fonts/InterTight-Semibold.ttf"),
     InterBold: require("../assets/fonts/InterTight-Semibold.ttf"),
     GelicaBold: require("../assets/fonts/Gelica-Bold.otf"),
+    DMSansMedium: require("../assets/fonts/DMSans-Medium.ttf"),
   });
 
   useEffect(() => {
