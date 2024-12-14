@@ -1,4 +1,10 @@
-# Welcome to your Expo app 👋
+# Welcome to W Crypto Wallet App 👋
+
+## Preview
+
+https://res.cloudinary.com/juwon-tech/video/upload/v1734151551/Simulator_Screen_Recording_-_iPhone_15_Pro_Max_-_2024-12-12_at_19.37.12_vnakn0.mov
+
+Design Inspiration - [UISnazz](https://x.com/uisnazz/status/1863972934705873321?s=46).
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
