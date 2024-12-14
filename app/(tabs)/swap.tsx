@@ -1,10 +1,10 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 
 import PageHeader from "@/components/layout/PageHeader";
 import CustomSafeAreaView from "@/components/layout/SafeAreaView";
 import SwapCoinPicker from "@/components/Swap/CoinPicker";
 
-import { SwitchVerticalIcon } from "@/constants/icons";
+import Icon from "@/components/Icon";
 
 const SwapScreen = () => {
   return (
@@ -16,7 +16,7 @@ const SwapScreen = () => {
 
           <View className="">
             <View className="size-11 bg-white items-center justify-center border border-[#F0F2F5] rounded-full mx-auto z-[1]">
-              <SwitchVerticalIcon />
+              <Icon iconName="switch-vertical" />
             </View>
             <View className="border-t border-[#F0F2F5] -top-[20px]" />
           </View>

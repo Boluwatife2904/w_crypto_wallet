@@ -2,7 +2,7 @@ import { View, Text, ScrollView, TouchableOpacity } from "react-native";
 import { useState } from "react";
 
 import WalletAssets from "./Assets";
-import { Graph } from "@/constants/icons";
+import Icon from "../Icon";
 
 const filters = ["1H", "24H", "1W", "1M", "6M", "1Y", "All"];
 
@@ -19,7 +19,7 @@ const WalletTokens = () => {
           <Text className="text-[14px] font-inter_medium -tracking-[0.3px] text-[#40B869]">+10% ($2) Today</Text>
         </View>
         <View className="mb-10">
-          <Graph />
+          <Icon iconName="graph" />
         </View>
         <ScrollView contentContainerStyle={{ flexGrow: 1, gap: 16 }} horizontal showsHorizontalScrollIndicator={false}>
           {filters.map((filter, index) => (

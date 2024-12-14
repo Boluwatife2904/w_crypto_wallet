@@ -1,8 +1,8 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import ActionSheet, { SheetManager } from "react-native-actions-sheet";
-import Button from "../ui/Button";
 
-import { MultiplyIcon } from "@/constants/icons";
+import Button from "../ui/Button";
+import Icon from "../Icon";
 
 const AddWalletSheet = () => {
   const confirmAction = async (action: "create" | "import") => {
@@ -19,7 +19,7 @@ const AddWalletSheet = () => {
       <View className="px-6 py-[33.5px]">
         <View className="mb-[30px] relative">
           <TouchableOpacity className="absolute -top-2.5 -left-3 p-3 z-[1]" onPress={() => SheetManager.hide("add-wallet-sheet")}>
-            <MultiplyIcon />
+            <Icon iconName="multiply" />
           </TouchableOpacity>
           <Text className="font-inter_medium text-[18px] text-center -tracking-[0.3px]">Add wallet</Text>
         </View>

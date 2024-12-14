@@ -1,5 +1,5 @@
-import { ChevronRightIcon } from "@/constants/icons";
 import { View, Text, Image } from "react-native";
+import Icon from "../Icon";
 
 const ASSETS = [
   { image: require("@/assets/images/coins/btc.png"), name: "BTC", balance: "0.002 BTC", value: "$200.00", increase: "+10%" },
@@ -9,10 +9,10 @@ const ASSETS = [
 
 const WalletAssets = () => {
   return (
-    <View style={{ gap: 20 }}>
+    <View style={{ gap: 20, paddingBottom: 48 }}>
       <View className="flex-row justify-between items-center">
         <Text className="text-[18px] font-inter_medium text-[#1D2739]">Assets</Text>
-        <ChevronRightIcon height={24} width={24} color="#98A2B3" />
+        <Icon iconName="chevron-right" height={24} width={24} color="#98A2B3" />
       </View>
       <View style={{ gap: 20 }} className="bg-white px-5 py-8">
         {ASSETS.map((asset, index) => (

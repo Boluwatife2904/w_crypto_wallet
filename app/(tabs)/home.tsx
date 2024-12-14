@@ -4,21 +4,27 @@ import { useRouter } from "expo-router";
 import PageHeader from "@/components/layout/PageHeader";
 import CustomSafeAreaView from "@/components/layout/SafeAreaView";
 
-import { AddLineIcon, ChevronRightIcon, EmptyStateIcon, PencilEditIcon, SearchIcon, SettingsIcon } from "@/constants/icons";
+import Icon from "@/components/Icon";
+import WalletBalance from "@/components/common/WalletBalance";
 
 const HomeScreen = () => {
   const router = useRouter();
 
   return (
     <>
-      <PageHeader showBackButton={false} showOptionsButton={false} LeftContent={<SettingsIcon />} RightContent={<SearchIcon color="black" />} />
+      <PageHeader
+        showBackButton={false}
+        showOptionsButton={false}
+        LeftContent={<Icon iconName="settings" />}
+        RightContent={<Icon iconName="search" color="black" />}
+      />
       <CustomSafeAreaView>
         <View style={{ gap: 16, marginBottom: 20 }}>
           <View className="flex-row items-center justify-between">
             <Text className="font-inter_medium text-[#1D2739] text-[18px] -tracking-[0.3px]">My wallets</Text>
             <View style={{ gap: 12 }} className="flex-row">
-              <AddLineIcon />
-              <PencilEditIcon />
+              <Icon iconName="add-line" />
+              <Icon iconName="pencil-edit" />
             </View>
           </View>
           <TouchableOpacity
@@ -26,29 +32,19 @@ const HomeScreen = () => {
             activeOpacity={0.7}
             onPress={() => router.push("/wallets/1")}
           >
-            <View style={{ gap: 13 }} className="flex-row">
-              <Image source={require("@/assets/images/w-avatar.png")} resizeMode="contain" className="size-[45px] block" />
-              <View style={{ gap: 4 }}>
-                <Text className="font-inter_medium text-[16px] -tracking-[0.3px] text-[#98A2B3]">0x74d5...35da</Text>
-                <Text className="text-[16px] font-inter_medium text-[#1D2739] leading-7">
-                  <Text className="text-[12px]">$</Text>
-                  0.
-                  <Text className="text-[#98A2B3]">00</Text>
-                </Text>
-              </View>
-            </View>
+            <WalletBalance />
             <View style={{ gap: 8 }} className="flex-row items-center">
               <Text className="text-[#98A2B3] text-[14px] font-inter_medium">+0%</Text>
-              <ChevronRightIcon strokeWidth={0.5} stroke={"#40B869"} />
+              <Icon iconName="chevron-right" strokeWidth={0.5} stroke={"#40B869"} />
             </View>
           </TouchableOpacity>
         </View>
         <View style={{ gap: 20 }} className="items-center justify-center">
           <View className="w-full flex-row items-end justify-between">
             <Text className="text-[#1D2739] text-[18px] font-inter_medium">Recent activity</Text>
-            <ChevronRightIcon stroke={"#98A2B3"} height={18} width={18} strokeWidth={0.5} />
+            <Icon iconName="chevron-right" stroke={"#98A2B3"} height={18} width={18} strokeWidth={0.5} />
           </View>
-          <EmptyStateIcon />
+          <Icon iconName="empty" />
           <Text className="text-center text-[#667185] -tracking-[0.3px] text-[16px] font-inter_medium">No transactions yet</Text>
         </View>
       </CustomSafeAreaView>

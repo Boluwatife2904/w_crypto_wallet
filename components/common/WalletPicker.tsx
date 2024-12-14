@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 
-import { ChevronDownIcon } from "@/constants/icons";
+import Icon from "../Icon";
 
 const WalletPicker = () => {
   return (
@@ -8,7 +8,7 @@ const WalletPicker = () => {
       <Text className="text-[#667185] text-center font-inter_medium text-[14px]">0x74d5...35da</Text>
       <View style={{ gap: 6 }} className="flex-row items-center justify-center">
         <Text className="text-center text-[12px] font-inter text-[#667185]">All networks</Text>
-        <ChevronDownIcon />
+        <Icon iconName="chevron-down" />
       </View>
     </TouchableOpacity>
   );

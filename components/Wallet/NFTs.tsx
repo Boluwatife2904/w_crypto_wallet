@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Image, ScrollView } from "react-native";
 import { BlurView } from "expo-blur";
-import { ArrowRightIcon } from "@/constants/icons";
+
+import Icon from "../Icon";
 
 const NFTS = [
   { name: "Blue heads", code: "#122", image: require("@/assets/images/nfts/1.jpg") },
@@ -29,7 +30,7 @@ const WalletNFTs = () => {
                 <Text className="text-white font-dmsans_medium text-[12px] leading-7">{nft.code}</Text>
               </View>
               <View className="bg-[#684FCF] p-2 rounded-md">
-                <ArrowRightIcon />
+                <Icon iconName="arrow-right" />
               </View>
             </BlurView>
           </TouchableOpacity>

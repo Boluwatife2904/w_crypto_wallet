@@ -1,5 +1,5 @@
 import { View, Text, Image } from "react-native";
-import React from "react";
+
 import PageHeader from "@/components/layout/PageHeader";
 import CustomSafeAreaView from "@/components/layout/SafeAreaView";
 

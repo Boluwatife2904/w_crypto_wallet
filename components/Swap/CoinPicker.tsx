@@ -1,7 +1,7 @@
 import { View, Text, Modal, TouchableOpacity, TextInput, Image, ScrollView } from "react-native";
 import { useState } from "react";
 
-import { ArrowDownIcon, MultiplyIcon, SearchIcon, VerifiedTickIcon } from "@/constants/icons";
+import Icon from "../Icon";
 
 interface PickerProps {
   action: "source" | "destination";
@@ -38,7 +38,7 @@ const CoinPicker = (props: PickerProps) => {
               />
               <View style={{ gap: 8 }} className="flex-row items-center">
                 <Text className="font-inter_medium text-[24px]">{action === "source" ? "ETH" : "USDC"}</Text>
-                <ArrowDownIcon />
+                <Icon iconName="arrow-down" />
               </View>
             </TouchableOpacity>
             <Text className="font-inter_medium text-[14px] leading-5 text-[#98A2B3]">Balance: {action === "source" ? "0.0004747" : "0"}</Text>
@@ -59,13 +59,13 @@ const CoinPicker = (props: PickerProps) => {
         <View style={{ gap: 20 }} className="px-[23px] py-8">
           <View className="flex-row items-center">
             <TouchableOpacity onPress={() => setModalVisible(false)}>
-              <MultiplyIcon height={24} width={24} />
+              <Icon iconName="multiply" height={24} width={24} />
             </TouchableOpacity>
             <Text className="font-inter_medium flex-1 text-[18px] text-center -tracking-[0.3px]">Select a token</Text>
           </View>
           <View>
             <View className="absolute flex top-2 left-4 z-[1]">
-              <SearchIcon color={'#5B7083'} />
+              <Icon iconName="search" color={"#5B7083"} />
             </View>
             <TextInput
               className="bg-[#F0F2F5] pl-[50px] py-[10px] pr-6 text-[16px] font-inter_medium -tracking-[0.3px] rounded-full"
@@ -85,7 +85,7 @@ const CoinPicker = (props: PickerProps) => {
                 <Image source={coin.image} className="size-9" resizeMode="contain" />
                 <View style={{ gap: 8 }} className="flex-row items-center">
                   <Text className="font-inter_medium text-[20px] text-[#1D2739]">{coin.name}</Text>
-                  {coin.verified && <VerifiedTickIcon />}
+                  {coin.verified && <Icon iconName="verified-tick" />}
                 </View>
               </TouchableOpacity>
             ))}
