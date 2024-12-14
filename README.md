@@ -2,7 +2,7 @@
 
 ## Preview
 
-https://res.cloudinary.com/juwon-tech/video/upload/v1734151551/Simulator_Screen_Recording_-_iPhone_15_Pro_Max_-_2024-12-12_at_19.37.12_vnakn0.mov
+[`Preview`](https://res.cloudinary.com/juwon-tech/video/upload/v1734151551/Simulator_Screen_Recording_-_iPhone_15_Pro_Max_-_2024-12-12_at_19.37.12_vnakn0.mov)
 
 Design Inspiration - [UISnazz](https://x.com/uisnazz/status/1863972934705873321?s=46).
 
